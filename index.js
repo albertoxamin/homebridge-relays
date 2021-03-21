@@ -48,6 +48,9 @@ RelayAccessory.prototype.timeOutCB = function (o) {
 	o.setState(false);
 	o.log("Relay for '%s', pin %d timed out.", o.name, o.pin);
 	o.timerid = -1;
+	setTimeout(function () {
+            this.homebridgeService.setCharacteristic(Characteristic.On, false);
+        }.bind(this), 1000);
 }
 
 RelayAccessory.prototype.readState = function () {
