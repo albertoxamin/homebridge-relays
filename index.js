@@ -38,7 +38,7 @@ RelayAccessory.prototype.setRelayOn = function (newState, callback) {
 	this.log("Relay status for '%s', pin %d is %s", this.name, this.pin, newState);
 
 	if (newState && this.duration > 0) {
-		this.timerid = setTimeout(this.timeOutCB, this.duration, this);
+		this.timerid = setTimeout(this.timeOutCB.bind(this), this.duration, this);
 	}
 
 	callback(null);
@@ -49,8 +49,8 @@ RelayAccessory.prototype.timeOutCB = function (o) {
 	o.log("Relay for '%s', pin %d timed out.", o.name, o.pin);
 	o.timerid = -1;
 	setTimeout(function () {
-		homebridgeService.setCharacteristic(Characteristic.On, false);
-	}.bind(), 1000);
+		this.service.setCharacteristic(Characteristic.On, false);
+	}.bind(this), 1000);
 }
 
 RelayAccessory.prototype.readState = function () {
@@ -69,6 +69,7 @@ RelayAccessory.prototype.gpioVal = function (val) {
 
 RelayAccessory.prototype.getServices = function () {
 	var relayService = new Service.Switch(this.name);
+	this.service = relayService;
 	relayService.getCharacteristic(Characteristic.On)
 		.on('get', this.getRelayStatus.bind(this))
 		.on('set', this.setRelayOn.bind(this));
