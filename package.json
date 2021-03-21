@@ -1,6 +1,6 @@
 {
-  "name": "homebridge-relays",
-  "version": "1.2.4",
+  "name": "homebridge-relays-stateless",
+  "version": "1.2.5",
   "description": "Raspberry Pi relay plugin for homebridge: https://github.com/nfarina/homebridge",
   "license": "MIT",
   "keywords": [
@@ -13,16 +13,16 @@
   "author": "Smartech",
   "repository": {
     "type": "git",
-    "url": "git://github.com/smartechru/homebridge-relays.git"
+    "url": "git://github.com/albertoxamin/homebridge-relays.git"
   },
   "dependencies": {
     "request": "^2.65.0",
     "rpio": "^2.1.0"
   },
   "bugs": {
-    "url": "https://github.com/smartechru/homebridge-relays/issues"
+    "url": "https://github.com/albertoxamin/homebridge-relays/issues"
   },
-  "homepage": "https://github.com/smartechru/homebridge-relays#readme",
+  "homepage": "https://github.com/albertoxamin/homebridge-relays#readme",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {

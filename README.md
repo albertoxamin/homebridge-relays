@@ -14,7 +14,7 @@ The raspberry pi can then control the state of the relays
 ## Installation
 
 1. Install homebridge using: `sudo npm install --unsafe-perm -g homebridge`
-2. Install this plugin using: `sudo npm install -g --unsafe-perm homebridge-relays`
+2. Install this plugin using: `sudo npm install -g --unsafe-perm homebridge-relays-stateless`
 3. Update your configuration file. See `config-sample.json` in this repository for a sample.
 
 ## Sample Configuration
@@ -31,7 +31,7 @@ The raspberry pi can then control the state of the relays
 
       "accessories": [
         {
-          "accessory": "Relay",
+          "accessory": "Relay-Stateless",
           "name": "Relay-1",
           "pin": 11
           "invert": true,
@@ -39,7 +39,7 @@ The raspberry pi can then control the state of the relays
           "duration_ms": 1000
         },
         {
-          "accessory": "Relay",
+          "accessory": "Relay-Stateless",
           "name": "Relay-2",
           "pin": 13
           "invert": false,
@@ -47,12 +47,12 @@ The raspberry pi can then control the state of the relays
           "duration_ms": 3600000
         },
         {
-          "accessory": "Relay",
+          "accessory": "Relay-Stateless",
           "name": "Relay-3",
           "pin": 15
         },
         {
-          "accessory": "Relay",
+          "accessory": "Relay-Stateless",
           "name": "Relay-4",
           "pin": 29
         }
