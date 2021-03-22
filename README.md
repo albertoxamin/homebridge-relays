@@ -1,4 +1,6 @@
-# Homebridge Relays
+# Homebridge Relays Stateless
+
+> TLDR: In my house I have relays that send a pulse to invert the current state of the light. And since homekit only has switches, this automatically reports the switch as off after 2 seconds, so the next time it is pressed it will invert the state. (this only happens if you set duration_ms)
 
 Controls 4 channel relays with a Raspberry Pi using HomeKit.
 
@@ -6,8 +8,8 @@ Controls 4 channel relays with a Raspberry Pi using HomeKit.
 
 The hardware is quite simple to construct.
 
-1. Raspberry Pi 3 Model B
-2. 4-relay module pins are connected to 4 GPIO pins (GPIO-17, 27, 22, 05).
+1. A Raspberry Pi 
+2. Relay module pins are connected to 4 GPIO pins (GPIO-17, 27, 22, 05).
 
 The raspberry pi can then control the state of the relays
 

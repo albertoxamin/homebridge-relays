@@ -1,31 +1,34 @@
 {
-  "name": "homebridge-relays-stateless",
-  "version": "1.2.9",
-  "description": "Raspberry Pi relay plugin for homebridge: https://github.com/nfarina/homebridge",
-  "license": "MIT",
-  "keywords": [
-    "homebridge-plugin"
-  ],
-  "engines": {
-    "node": ">=8.15.0",
-    "homebridge": ">=0.4.45"
-  },
-  "author": "Smartech",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/albertoxamin/homebridge-relays.git"
-  },
-  "dependencies": {
-    "request": "^2.65.0",
-    "rpio": "^2.1.0"
-  },
-  "bugs": {
-    "url": "https://github.com/albertoxamin/homebridge-relays/issues"
-  },
-  "homepage": "https://github.com/albertoxamin/homebridge-relays#readme",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+	"name": "homebridge-relays-stateless",
+	"version": "1.2.10",
+	"description": "Raspberry Pi relay stateless plugin for homebridge: https://github.com/albertoxamin/homebridge-relays",
+	"license": "MIT",
+	"keywords": [
+		"homebridge-plugin",
+		"stateless",
+		"relay",
+		"homekit"
+	],
+	"engines": {
+		"node": ">=8.15.0",
+		"homebridge": ">=0.4.45"
+	},
+	"author": "Smartech",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/albertoxamin/homebridge-relays.git"
+	},
+	"dependencies": {
+		"request": "^2.65.0",
+		"rpio": "^2.1.0"
+	},
+	"bugs": {
+		"url": "https://github.com/albertoxamin/homebridge-relays/issues"
+	},
+	"homepage": "https://github.com/albertoxamin/homebridge-relays#readme",
+	"main": "index.js",
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
 }
